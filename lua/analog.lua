@@ -5,12 +5,13 @@ local Color, colors, Group, groups, styles = require('colorbuddy').setup()
 Color.new('background',  '#21242D')
 Color.new('red',         '#FC003E')
 Color.new('green',       '#23ce6b')
-Color.new('yellow',      '#f0c674')
+Color.new('yellow',      '#fabc3c')
 Color.new('white',      '#ffffff')
 Color.new('black',      '#000000')
 Color.new('blue',      '#20a4f3')
 Color.new('orange',      '#fabc3c')
 Color.new('dust',      '#70877f')
+Color.new('grey',      '#b0b1b0')
 --Color.new('violet',      '7a28cb')
 
 -- Define highlights in terms of `colors` and `groups`
@@ -31,4 +32,8 @@ Group.new('DiagnosticVirtualTextError', colors.black:light() , colors.red:dark()
 --LspInlayHint   xxx guifg=#545c7e guibg=#1d202d
 
 Group.new('LspInlayHint', colors.dust, colors.background)
-
+Group.new('Type', colors.white, colors.background)
+Group.new('Structure', colors.white, colors.background)
+Group.new('Keyword', colors.white, colors.background, styles.bold)
+Group.new('Operator', colors.grey, colors.background, styles.bold)
+--Group.new('Preproc', colors.orange, colors.background, styles.bold)
